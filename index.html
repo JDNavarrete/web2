@@ -1,209 +1,244 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Fernandez</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/png" href="imagenes/Logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    
 </head>
 <body>
-    <!-- Introducción con imagen -->
-    <div id="intro-overlay">
-        <img src="imagenes/inicio.jpg" alt="Imagen de introducción">
-    </div>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav-logo">JAVIER FERNANDEZ</a>
+            </div>
 
-    <!-- Contenedor del contenido de la página (oculto inicialmente) -->
-    <div id="page-content" style="display: none;">
-        <header class="l-header">
-            <nav class="nav bd-grid">
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre Mi</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home" id="home">
+            <div class="home-container bd-grid">
+                <h1 class="home-title">
+                    <span>Riego y servicios</span>
+                    <p class="parrafo">Nos dedicamos a optimizar el uso del agua en tus cultivos, 
+                        jardines o áreas verdes con sistemas de riegos de alta eficiencia. </p>
+                    </h1>
+                    
+                <div class="home-scroll">
+                    <a href="#about" class="home-scroll-link"><i class='bx bx-up-arrow-alt' ></i>SCROLL</a>
+                </div>
+                
+                
+            </div>
+        </section>
+    
+
+        <section class="about section" id="about">
+            <h2 class="section-title">Sobre mi</h2>
+
+            <div class="about-container bd-grid">
+                <div class="about-img">
+                    <img src="imagenes/Logo.png" alt="imagen javier">
+                </div>
+
                 <div>
-                    <a href="#" class="nav-logo">JAVIER FERNÁNDEZ</a>
-                </div>
+                    <h2 class="about-subtitle">Javier Fernandez</h2>
+                    <span class="about-profession">Especialista en riego y servicios</span>
+                    <p class="about-text"> Soy un profesional especializado en sistemas de riego eficientes y sostenibles. Con años de experiencia en el sector, me dedico a diseñar, instalar y mantener sistemas de riego que optimizan el uso del agua y maximizan el rendimiento de los cultivos.
+                        Trabajamos con las mejores marcas y tecnología del mercado.</p>
 
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
-                        <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                        <li class="nav-item"><a href="#habilidades" class="nav-link">Servicios</a></li>
-                        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav-toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!-- Sección Inicio -->
-            <section class="home" id="inicio">
-                <div class="home-container bd-grid">
-                    <h1 class="home-title"><span>Riego y</span><br>Servicios</h1>
-                    <p class="texto-ini">
-                        Si estás buscando un sistema de riego eficiente y confiable, no dudes en contactarme.
-                        Juntos podemos hacer que tus cultivos alcancen su máximo potencial.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Sección Sobre Mí -->
-            <section class="about section" id="sobre-mi">
-                <h2 class="section-title">Sobre Mí</h2>
-                <div class="about-container bd-grid">
-                    <div class="about-img">
-                        <img src="imagenes/Logo.png" alt="Imagen de Javier Fernández">
+                    <div class="about-social">
+                        <a href="#" class="about-social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="about-social-icon"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="about-social-icon"><i class='bx bxl-instagram'></i></a>
                     </div>
-                    <div>
-                        <h2 class="about-subtitle">Javier Fernández</h2>
-                        <span class="about-profession">Especialista en riegos y servicios</span>
-                        <p class="about-text">
-                            Soy un profesional especializado en sistemas de riego eficientes y sostenibles. Con años de experiencia en el sector, me dedico a diseñar, instalar y mantener sistemas de riego que optimizan el uso del agua y maximizan el rendimiento de los cultivos.
-                            Trabajamos con las mejores marcas y tecnología del mercado.
-                        </p>
-                        <div class="about-social">
-                            <a href="#" class="about-social-icon"><i class='bx bxl-linkedin'></i></a>
-                            <a href="#" class="about-social-icon"><i class='bx bxl-github'></i></a>
-                            <a href="#" class="about-social-icon"><i class='bx bxl-instagram'></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="container">
-                    <div class="panel active"
-                        style="background-image: url(imagenes/asper.jpg)">
-                        <h3>Riego por Aspersión: Cobertura uniforme para grandes extensiones.</h3>
-                    </div>
-                    <div class="panel"
-                        style="background-image: url(imagenes/GOTA.png)">
-                        <h3>Riego por Goteo: Precisión y ahorro de agua en cada gota.</h3>
-                    </div>
-                    <div class="panel"
-                        style="background-image: url(imagenes/pivotante.jpg);">
-                        <h3>Riego Pivotante: Tecnología avanzada para grandes cultivos.</h3>
-                    </div>
-                    <div class="panel"
-                        style="background-image: url(imagenes/asper3.jpg);">
-                        <h3>Riego eficiente, cultivos saludables y mayores ganancias.</h3>
-                    </div>
-                    <div class="panel"
-                        style="background-image: url(imagenes/gota6.jpg);">
-                        <h3>Comprometidos con la sostenibilidad y el cuidado del medio ambiente.</h3>
-                    </div>
-                </div>
-            </section>  
-
-            <!-- Sección Servicios -->
-            <section class="skills section" id="habilidades">
-                <h2 class="section-title">Servicios</h2>
-                <div class="skills-container bd-grid">
-                    <div class="skills-box">
-                        <h3 class="skills-subtitle">Riego</h3>
-                        <span class="skills-name">Riego por goteo</span>
-                        <span class="skills-name">Riego por aspersión</span>
-                        <span class="skills-name">Riego por Pivote</span>
-                        <span class="skills-name">Riego subterráneo</span>
-
-                        <h3 class="skills-subtitle">Servicios</h3>
-                        <span class="skills-name">Mantenimiento de bombas</span>
-                        <span class="skills-name">Mantenimiento de emisores</span>
-                        <span class="skills-name">Mantenimiento de tuberías</span>
-                    </div>
-                    <div class="skills-img">
-                        <img src="imagenes/trabajo3.jpg" alt="Imagen de habilidades">
-                    </div>
-                </div>
-            </section>
-                 <!-- Sección Vertical Slider  -->
-<section class="vertical-slider" id="vertical-slider">
-    <div class="slider-container">
-        <div class="left-slide">
-            <div style="background-color: #040505a6">
-                <h1>Riego Pivotante</h1>
-                <p>Tecnología avanzada para grandes extensiones</p>
+                </div>   
             </div>
-            <div style="background-color: #ee993991">
-                <h1>Servicios Personalizados</h1>
-                <p>Soluciones adaptadas a tus necesidades</p>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Servicios</h2>
+
+            <div class="skills-container bd-grid">
+                <div class="skills-box">
+                    <h3 class="skils-subtitle">Riego</h3>
+
+                    <span class="skills-name">Goteo</span>
+                    <span class="skills-name">Aspercion</span>
+                    <span class="skills-name">Pivotante</span>
+                  
+
+                    <h3 class="skils-subtitle">Mantenimiento</h3>
+
+                    <span class="skills-name">Bombas</span>
+                    <span class="skills-name">Cañerias</span>
+                    <span class="skills-name">Emisores</span>
+                </div>
+
+                <div class="skills-img">
+                    <img src="imagenes/trabajo3.jpg" alt="skills image">
+                </div>
             </div>
-            <div style="background-color: #2a85baa6">
-                <h1>Riego por Aspersión</h1>
-                <p>Cobertura uniforme para grandes áreas</p>
+        </section>
+
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+
+            <div class="portfolio-container bd-grid">
+                <div class="portfolio-img">
+                    <img src="imagenes/gota4.jpg" alt="Riego" data-description="Sistema de riego por goteo instalado en viñedos, optimizando el uso de agua en un 40%">
+
+                    <div class="portfolio-link">
+                        <span href="" class="portfolio-link-name">Ver detalle</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="imagenes/gota2.jpg" alt="Riego" data-description="Riego preciso, ahorro al maximo. Menos agua mas eficiencia">
+
+                    <div class="portfolio-link">
+                        <span href="" class="portfolio-link-name">Ver detalle</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="imagenes/asper4.jpg" alt="Riego" data-description="Cobertura total con cada aspersor, distribucion eficiente en cada rincón">
+
+                    <div class="portfolio-link">
+                        <span href="" class="portfolio-link-name">Ver detalle</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="imagenes/asper.jpg" alt="Riego" data-description="Hidratacion balanceada para tu campo">
+
+                    <div class="portfolio-link">
+                        <span href="" class="portfolio-link-name">Ver detalles</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="imagenes/pivotante.jpg" alt="Riego" data-description="Tecnologia avanzada para grandes extenciones, 
+                    Sistema automatizado para riego inteligente">
+
+                    <div class="portfolio-link">
+                        <span href="" class="portfolio-link-name">Ver detalles</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-img">
+                    <img src="imagenes/trabajo.jpg" alt="Riego" data-description="Optimizamos tu sistema, cuidamos tu inversion, trabajamos con las mejores marcas. Mantenimiento profesional para maxima eficiencia">
+
+                    <div class="portfolio-link">
+                        <span href="" class="portfolio-link-name">Ver detalles</span>
+                    </div>
+                </div>
+
             </div>
-           
-            <div style="background-color: #1411dba2">
-                <h1>Riego por Goteo</h1>
-                <p>Eficiencia y precisión en cada gota</p>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contacto</h2>
+
+            <div class="contact-container bd-grid">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">EMAIL</h3>
+                    <span class="contact-text">info.mail.com</span>
+
+                    <h3 class="contact-subtitle">TELEFONO</h3>
+                    <span class="contact-text">+54 261-6181282</span>
+
+                    
+                </div>
+
+            
+                <form id="contactForm" class="contact-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="contact-inputs">
+                        <input type="text" name="user_name" placeholder="Nombre" class="contact-input" required>
+                        <input type="email" name="user_email" placeholder="Email" class="contact-input" required>
+                    </div>
+                    
+                    <textarea name="message" cols="0" rows="10" class="contact-input" required></textarea>
+                    <button type="submit" class="contact-button">Enviar</button>
+                </form>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container bd-grid">
+            <div class="footer-data">
+                <h2 class="footer-title">JAVIER FERNANDEZ</h2>
+                <p class="footer-text">¿Listo para llevar tu agricultura al siguiente nivel? 
+                    ¡Escríbenos!</p>
+            </div>
+
+            <div class="footer-data">
+                <h2 class="footer-title">Enlaces</h2>
+                <ul>
+                    <li><a href="#home" class="footer-link">Inicio</a></li>
+                    <li><a href="#about" class="footer-link">Sobre mi</a></li>
+                    <li><a href="#skills" class="footer-link">Servicios</a></li>
+                    <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+                    <li><a href="#contact" class="footer-link">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-data">
+                <h2 class="footer-title">Sigueme</h2>
+
+                <a href="#" class="footer-social"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer-social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer-social"><i class='bx bxl-twitter'></i></a>
             </div>
         </div>
-        <div class="right-slide">
-            <div style="background-image: url('imagenes/gota2.jpg')"></div>
-            <div style="background-image: url('imagenes/asper2.jpg')"></div>
-            <div style="background-image: url('imagenes/trabajo.jpg')"></div>
-            <div style="background-image: url('imagenes/pivotante3.jpg')"></div>
-        </div>
+    </footer>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/+542616181282" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+        <p id="lightbox-text"></p>
     </div>
-</section>
+</div>
 
-            <!-- Sección Contacto -->
-            <section class="contact section" id="contacto">
-                <h2 class="section-title">Contacto</h2>
-                <div class="contact-container bd-grid">
-                    <div class="contact-info">
-                        <h3 class="contact-subtitle">CORREO ELECTRÓNICO</h3>
-                        <span class="contact-text">info.mail.com</span>
 
-                        <h3 class="contact-subtitle">TELÉFONO</h3>
-                        <span class="contact-text">+54 261 6181282</span>
-                    </div>
-                    <form action="" class="contact-form">
-                        <div class="contact-inputs">
-                            <input type="text" name="user_name" placeholder="Nombre" required>
-                            <input type="email" name="user_email" placeholder="Email" required>
-                        </div>
-                        <textarea name="message" cols="0" rows="10" required></textarea> 
-                        <input type="submit" value="Enviar" class="contact-button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!-- Pie de página -->
-        <footer class="footer section">
-            <div class="footer-container bd-grid">
-                <div class="footer-data">
-                    <h2 class="footer-title">Javier Fernández</h2>
-                    <p class="footer-text">¿Listo para llevar tu agricultura al siguiente nivel? ¡Escríbenos!</p>
-                </div>
-                <div class="footer-data">
-                    <h2 class="footer-title">Enlaces</h2>
-                    <ul>
-                        <li><a href="#inicio" class="footer-link">Inicio</a></li>
-                        <li><a href="#sobre-mi" class="footer-link">Sobre Mí</a></li>
-                        <li><a href="#habilidades" class="footer-link">Servicios</a></li>
-                        <li><a href="#contacto" class="footer-link">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-data">
-                    <h2 class="footer-title">SÍGUEME</h2>
-                    <a href="#" class="footer-social"><i class='bx bxl-instagram'></i></a>
-                    <a href="#" class="footer-social"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" class="footer-social"><i class='bx bxl-twitter'></i></a>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Botón de WhatsApp -->
-        <a href="https://wa.me/+542612598499" class="whatsapp-button" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+   
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        // clave publica
+        emailjs.init('GooRnzxvjwMv9NiuN'); // Reemplaza esto
+      </script>
 </body>
 </html>
