@@ -475,3 +475,20 @@ img { max-width: 100%; height: auto; display: block; }
         align-items: center;
     }
 }
+/* Estilos para el estado "cargando" del botón */
+.contact-button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #cccccc;
+}
+
+/* Estilos para las alertas de SweetAlert */
+.swal2-popup {
+    font-family: var(--body-font);
+    border-radius: 8px;
+}
+
+.swal2-title {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}

@@ -119,38 +119,55 @@ document.getElementById('lightbox').addEventListener('click', (e) => {
         document.getElementById('lightbox').style.display = 'none';
     }
 });
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-    
-    const formData = new FormData(this);
-    
-    // Envía el formulario usando Fetch API
-    fetch('https://formsubmit.co/ajax/navarretedamianj@gmail.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Muestra SweetAlert2 si el envío fue exitoso
-        Swal.fire({
-            title: '¡Mensaje enviado!',
-            text: 'Gracias por contactarme. Responderé a la brevedad.',
+// =============================================
+// FORMULARIO DE CONTACTO
+// =============================================
+
+document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+
+    try {
+        // Feedback visual durante el envío
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        // Enviar datos a FormSubmit
+        const response = await fetch('https://formsubmit.co/ajax/navarretedamianj@gmail.com', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Error al enviar');
+
+        // Mostrar alerta de éxito
+        await Swal.fire({
+            title: '¡Éxito!',
+            text: 'Mensaje enviado correctamente',
             icon: 'success',
             confirmButtonText: 'Aceptar'
         });
-        
-        // Limpia el formulario después del envío
-        document.getElementById('contactForm').reset();
-    })
-    .catch(error => {
-        Swal.fire({
+
+        // Resetear formulario
+        form.reset();
+
+    } catch (error) {
+        // Mostrar alerta de error
+        await Swal.fire({
             title: 'Error',
-            text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
+            text: error.message.includes('Failed to fetch') 
+                ? 'Problema de conexión. Verifica tu internet.' 
+                : 'Error al enviar el mensaje. Intenta nuevamente.',
             icon: 'error',
-            confirmButtonText: 'Aceptar'
+            confirmButtonText: 'Entendido'
         });
-    });
+    } finally {
+        // Restaurar el botón
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+    }
 });

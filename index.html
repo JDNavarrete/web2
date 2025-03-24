@@ -169,10 +169,15 @@
                     
                 </div>
 
+            
                 <form id="contactForm" class="contact-form">
+                    <!-- Campos ocultos para FormSubmit -->
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://jdnavarrete.github.io/web/gracias.html">
+                    <input type="hidden" name="_next" value="https://jdnavarrete.github.io/web2/gracias.html">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
                     
+                    <!-- Campos visibles -->
                     <div class="contact-inputs">
                         <input type="text" name="nombre" placeholder="Nombre" class="contact-input" required>
                         <input type="email" name="email" placeholder="Email" class="contact-input" required>
@@ -181,6 +186,8 @@
                     <textarea name="mensaje" cols="0" rows="10" class="contact-input" required></textarea>
                     <button type="submit" class="contact-button">Enviar</button>
                 </form>
+                
+                
             </div>
         </section>
 
@@ -226,8 +233,12 @@
         <p id="lightbox-text"></p>
     </div>
 </div>
-    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+   
+<script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </body>
 </html>
