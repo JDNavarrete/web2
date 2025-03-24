@@ -119,38 +119,40 @@ document.getElementById('lightbox').addEventListener('click', (e) => {
         document.getElementById('lightbox').style.display = 'none';
     }
 });
+
+
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+    e.preventDefault();
     
-    const formData = new FormData(this);
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
     
-    // Envía el formulario usando Fetch API
-    fetch('https://formsubmit.co/ajax/navarretedamianj@gmail.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Muestra SweetAlert2 si el envío fue exitoso
+    // Feedback visual
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    emailjs.sendForm(
+        'service_lzyl0i3',
+        'template_djs3bqo',
+        this
+    )
+    .then(() => {
         Swal.fire({
             title: '¡Mensaje enviado!',
-            text: 'Gracias por contactarme. Responderé a la brevedad.',
-            icon: 'success',
-            confirmButtonText: 'Aceptar'
+            text: 'Gracias por contactarme. Te responderé pronto.',
+            icon: 'success'
         });
-        
-        // Limpia el formulario después del envío
-        document.getElementById('contactForm').reset();
+        this.reset();
     })
-    .catch(error => {
+    .catch(() => {
         Swal.fire({
             title: 'Error',
-            text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
-            icon: 'error',
-            confirmButtonText: 'Aceptar'
+            text: 'No se pudo enviar el mensaje. Por favor, inténtalo nuevamente.',
+            icon: 'error'
         });
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
     });
 });

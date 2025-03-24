@@ -9,6 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <header class="l-header">
@@ -169,18 +170,19 @@
                     
                 </div>
 
+            
                 <form id="contactForm" class="contact-form">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://jdnavarrete.github.io/web/gracias.html">
                     
                     <div class="contact-inputs">
-                        <input type="text" name="nombre" placeholder="Nombre" class="contact-input" required>
-                        <input type="email" name="email" placeholder="Email" class="contact-input" required>
+                        <input type="text" name="user_name" placeholder="Nombre" class="contact-input" required>
+                        <input type="email" name="user_email" placeholder="Email" class="contact-input" required>
                     </div>
                     
-                    <textarea name="mensaje" cols="0" rows="10" class="contact-input" required></textarea>
+                    <textarea name="message" cols="0" rows="10" class="contact-input" required></textarea>
                     <button type="submit" class="contact-button">Enviar</button>
                 </form>
+                
             </div>
         </section>
 
@@ -226,8 +228,17 @@
         <p id="lightbox-text"></p>
     </div>
 </div>
+
+
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+   
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        // clave publica
+        emailjs.init('GooRnzxvjwMv9NiuN'); // Reemplaza esto
+      </script>
 </body>
 </html>
