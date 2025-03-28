@@ -162,10 +162,10 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--white-color);
     line-height: 0.8;
     text-shadow: 
-        -3px -3px 0 #000,
-        3px -3px 0 #000,
-        -3px 3px 0 #000,
-        3px 3px 0 #000;
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
     
      .home-title span {
